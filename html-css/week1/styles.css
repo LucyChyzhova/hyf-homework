@@ -1,0 +1,265 @@
+
+body{
+  font-family: "Curier New", Courier, monospace;
+  margin-left: 2%;
+  
+  color: rgb(24, 23, 23);
+}
+
+.discription{
+  flex-direction: row-reverse; 
+  display: flex;
+  margin-right: 0;
+}
+
+.discription_picture img{
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.discription_picture{
+    height: auto;
+    display: block;  
+}
+
+.discription_info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3%;
+  margin-top: 0;
+  justify-content: flex-start;
+  width: 27%;  
+}
+
+.data{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+h1{
+  font-size: 50px;
+  margin-top: 0;
+}
+  
+h3{
+  font-size: 16px;
+  margin-top: 0;
+}
+ 
+.contact_info{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.contact_info i:nth-child(1){
+    margin-bottom: 15px;
+}
+
+.contact_info:hover:not(.active){
+  cursor: pointer;
+  color: black;
+  opacity: 1;
+}
+
+.networking{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-top: 2%;
+  position: fixed;
+}
+
+.networking a{
+  padding-top: 20px;
+  color: black;
+  font-size: 22px;
+  opacity: 0.7;
+}
+
+.networking a:hover:not(.active){
+  opacity: 1;
+}
+
+.text h3:nth-child(1){
+  margin-top: 5%;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(75, 152, 253);
+}
+
+p{
+    margin: 0 10% 5% 10%;
+    font-size: 16px; 
+    text-align: center; 
+  }
+
+  mark{
+    color:rgb(75, 152, 253);
+  } 
+
+/* When resolution <= 1400px, hide optionA and show optionB*/
+@media (max-width: 1400px) {
+    .optionB { display: inline-block; }
+    .optionA { display: none; }
+    .country { display: none; } 
+}
+
+/* When resolution > 1400px, hide optionB and show optionA*/
+@media (min-width: 1399px) {
+    .optionB { display: none; }
+    .optionA { display: inline-block; }
+}
+
+.map_country{
+  display: flex;
+  flex-direction: row;
+}
+
+.map_interactive{
+  max-width: 80%;
+  height: auto;
+  display: block; 
+  margin: 3% 0 5% 10%;
+}
+
+.map{
+  max-width: 100%;
+  height: auto;
+}
+
+.country{
+  margin-top: 180px;
+  margin-left: 50px;
+  width: 220px;
+  height: 100px;  
+  border-radius: 10px;
+  color: rgb(75, 152, 253);
+  text-align: center;
+}
+
+#country_name{
+  margin-top: 20px;  
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.background,
+.sourses{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 4%;
+}
+
+.expirience,
+.education,
+.help_links,
+.HYF_links{
+  background-color: rgb(75, 152, 253);
+  border: 5px solid white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 45%;  
+  min-width: 280px; 
+  padding: 7px;
+}
+
+.education h4,
+.expirience h4,
+.help_links h4,
+.HYF_links h4{
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+.blue_background li a:hover{
+  text-decoration: none;
+  color:white;
+}
+
+.blue_background li a{
+  color: rgb(204, 226, 255);
+}
+
+@media screen and (max-width: 900px){
+    .discription{
+      flex-direction: row-reverse;
+    }
+    
+    .discription_info{
+      width: 120%;
+    }
+    
+    .data{
+       display: flex;
+       flex-direction: column;
+       margin-bottom: 0;
+    }
+
+    .contact_info{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+    }
+
+    .expirience,
+    .education,
+    .HYF_links,
+    .help_links{
+        width: 75%; } 
+}
+
+  @media screen and (max-width: 600px){
+  
+    .discription{
+        flex-direction: row-reverse;
+    }
+      
+    .discription_info{
+        width: 120%;
+    }
+      
+        
+    h1{
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+
+    h3{
+        font-size: 10px;
+    }
+        
+    .contact_info{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 9px;
+    }
+
+    .contact_info i:nth-child(1){
+        margin-bottom: 8px;
+    }
+
+    .networking a{
+        padding-right: 10%;
+        font-size: 15px;
+    }
+}

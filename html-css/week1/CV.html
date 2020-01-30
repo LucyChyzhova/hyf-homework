@@ -1,0 +1,180 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <!--this link for icons-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css" />
+    <title>CV Lucy Chyzhova</title>
+</head>
+
+<body>
+
+    <!--Main section-->
+    <main>
+        <div class="discription">
+            <div class="discription_picture">
+                <img src="https://imgur.com/gairTkC.png" alt="Lucy's picture">
+            </div>
+
+            <div class="discription_info">
+                <div class="data">
+                    <h1>Lucy Chyzhova</h1>
+                    <h3>Frontend developer | UX&nbsp;designer</h3>
+                </div>
+
+                <div>
+                    <ul class="contact_info">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i> lucy.chyzhova@gmail.com</li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i> +45 5015 4613</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <nav class="networking">
+                        <a target="blank" href="https://github.com/LucyChyzhova"><i class="fa fa-github-square"
+                                aria-hidden="true"></i></a>
+                        <a target="blank" href="https://www.linkedin.com/in/liudmylachyzhova/"><i
+                                class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                        <a target="blank" href="https://www.facebook.com/liudmyla.chyzhova"><i
+                                class="fa fa-facebook-official" aria-hidden="true"> </i> </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="text">
+            <h3><strong> Work and trevel map </strong></h3>
+            <p> I focus on having a deep understanding of users, what they need, what they value, their abilities, and
+                also their limitations based on my work and travel experience.
+                <span class="optionA"><strong><mark>Choose a country.</mark></strong> </span>
+                <span class="optionB"><strong><mark>I have visited around 25 countries.</mark></strong> </span></p>
+        </div>
+
+        <article>
+            <div class="map_country">
+                <div class="map_interactive">
+                    <img class="map" usemap="#workmap" src="https://imgur.com/bLKsCXo.png" alt="map">
+                    <map name="workmap">
+                        <area shape="rect" coords="510,110,550,130" alt="Ukraine" data-country="Ukraine my Motherland"
+                            href="#" />
+                        <area shape="rect" coords="485,100,510,115" alt="Poland" data-country="Poland 2016-2018"
+                            href="#" />
+                        <area shape="rect" coords="465,105,486,131" alt="Germany" data-country="Germany 2019"
+                            href="#" />
+                        <area shape="rect" coords="469,92,476,100" alt="Denmark" data-country="Denmark 2018-2020"
+                            href="#" />
+                        <area shape="rect" coords="547,75,574,90" alt="Russia" data-country="Russia 2012" href="#" />
+                        <area shape="rect" coords="166,163,204,197" alt="USA" data-country="USA 2017" href="#" />
+                        <area shape="rect" coords="117,217,123,231" alt="Mexico" data-country="Mexico 2017" href="#" />
+                        <area shape="rect" coords="522,197,553,231" alt="Egypt" data-country="Egypt" href="#" />
+                        <area shape="circle" coords="543,177,8" alt="Cyprus" data-country="Cyprus 2015" href="#" />
+                        <area shape="rect" coords="480,53,503,95" alt="Sweden" data-country="Sweden 2020" href="#" />
+                        <area shape="rect" coords="507,47,520,74" alt="Finland" data-country="Finland 2020" href="#" />
+                        <area shape="rect" coords="855,157,878,195" alt="Japan" data-country="Japan 2012" href="#" />
+                        <area shape="rect" coords="515,99,535,110" alt="Belarus" data-country="Belarus 2011" href="#" />
+                        <area shape="rect" coords="505,95,520,105" alt="Lithuania" data-country="Lithuania 2011"
+                            href="#" />
+                        <area shape="rect" coords="465,135,495,170" alt="Italy" data-country="Italy 2012" href="#" />
+                        <area shape="rect" coords="420,147,448,175" alt="Spain" data-country="Spain 2019" href="#" />
+                        <area shape="circle" coords="408,180,5" alt="Madeira" data-country="Madeira 2018" href="#" />
+                        <area shape="rect" coords="441,121,465,146" alt="France" data-country="France 2012" href="#" />
+                        <area shape="rect" coords="454,113,462,125" alt="The Nitherlands"
+                            data-country="The Nitherlands 2019" href="#" />
+                        <area shape="rect" coords="481,115,505,142" alt="Czechia, Austria, Slovenia, Croatia"
+                            data-country="Czechia, Austria, Slovenia, Croatia 2018" href="#" />
+                    </map>
+                </div>
+
+                <div class="country">
+                    <p id="country_name"></p>
+                </div>
+
+                <script>
+                    if (window.innerWidth > 1400) {
+
+                        var areas = document.querySelectorAll('area[data-country]');
+                        for (var i = 0; i < areas.length; i++) {
+                            const area = areas[i];
+                            area.addEventListener('click', myFunction);
+                        }
+                        function myFunction(event) {
+                            event.preventDefault();
+                            var area = event.target;
+                            var countryName = area.dataset.country;
+                            document.getElementById("country_name").innerHTML = countryName;
+                        }
+                    }
+                </script>
+            </div>
+        </article>
+
+        <article>
+            <div class="background">
+                <div class="expirience">
+                    <h4>Work expirience</h4>
+                    <ol>
+                        <li>UX/UI designer. Student & Innovation House. 2019</li>
+                        <li>UX/UI designer. Self-employed</li>
+                        <li>Web designer. Nihon Sokutei</li>
+                        <li>Art director. World Web Studio</li>
+                    </ol>
+                </div>
+
+                <div class="education">
+                    <h4>Education</h4>
+                    <ol>
+                        <li>HackYourFuture Copenhagen 2020</li>
+                        <li>HTML, CSS, JavaScript for Web Developer by Johns Hopkins University, on-line course. 2019
+                        </li>
+                        <li>HTML, CSS, JavaScript for Web Developer by Johns Hopkins University, on-line course. 2018
+                        </li>
+                        <li>“Visual Elements of User Interface Design” by California inst. of the Arts. on-line course.
+                            2018 </li>
+                        <li>Kyiv national university of trade and economics. Master's degree. Marketing.Advertising
+                            business. 2007&nbsp;-&nbsp;2012</li>
+                    </ol>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <div class="sourses">
+                <div class="help_links">
+                    <h4>Knowledge about HYF</h4>
+                    <ul class="blue_background">
+                        <li><a href="https://www.linkedin.com/school/hackyourfuture-copenhagen/" target="_blank">HYF
+                                Linkedin</a></li>
+                        <li><a href="https://hackyourfuture-cph.slack.com/signup" target="_blank">HYF slack</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCgWEvuTAyg7qbWcq0M8w4EQ" target="_blank">HYF
+                                youtube</a></li>
+                        <li><a href="https://github.com/HackYourFuture-CPH" target="_blank">github HYF</a></li>
+                        <li><a href="https://www.hackyourfuture.dk/" target="_blank">HackYourFuture web-site</a></li>
+                    </ul>
+                </div>
+
+                <div class="HYF_links">
+                    <h4>Sources</h4>
+                    <ul class="blue_background">
+                        <li><a href="https://codepen.io/reskk/pen/ALdpbz?editors=1100" target="_blank">Flex example</a>
+                        </li>
+                        <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flex
+                                theory</a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=RwYbpRQHZRk" target="_blank">Flex
+                                expample on Youtube</a>
+                        </li>
+                        <li><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_images_map2"
+                                target="_blank">JS example</a></li>
+                        <li><a href="https://internetingishard.com/html-and-css/" target="_blank">HTML and CSS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+    </main>
+</body>
+
+</html>
