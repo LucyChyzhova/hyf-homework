@@ -46,7 +46,7 @@ h3{
   font-size: 16px;
   margin-top: 0;
 }
- 
+
 .contact_info{
   display: flex;
   flex-direction: column;
@@ -97,7 +97,13 @@ p{
     margin: 0 10% 5% 10%;
     font-size: 16px; 
     text-align: center; 
-  }
+}
+ 
+.strong,
+.optionA,
+.optionB{
+    font-weight: bold;
+} 
 
   mark{
     color:rgb(75, 152, 253);
@@ -149,7 +155,7 @@ p{
   font-weight: bold;
 }
 
-.background,
+.my_background,
 .sourses{
   display: flex;
   flex-direction: row;
