@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Step1</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">Logo</div>
+            <div class="navigation">Navigation</div>
+        </div>
+    </header>
+
+    <div class="text">
+        <h1>Sign up to yourcustomtailor.com</h1>
+        <p class="text60">We can’t wait to help you improve your life-style and gain the attention from people around
+            you!</p> 
+            <p class="text60">Signup below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy
+            picking the best offers that match your preferences and style. Every week we will send you a
+            hand-picked selection - we just need to know a few details about your first…</p>
+        <h2>Step 1/4 - tell us who you are?</h2>
+        <p class="bold">Progress</p>
+        
+        <div class="meter">
+            <div class="line line-25"><div class="progress line"></div>
+            </div>
+        </div>
+    
+        <p class="text60">Nice to meet you! Let's spend a minute to get to know each other? Please enter the
+            following:
+        </p>
+    </div>
+
+
+    <div class="container">
+        <form action="step2.html" method="POST">
+            <div class="name">
+                <div class="f-name">
+                    <label for="first-name-s">First name*</label>
+                    <input type="text" id="first-name-s" required>
+                </div>
+                <div class="l-name">
+                    <label for="last-name-s">Last name*</label>
+                    <input type="text" id="last-name-s" required>
+                </div>
+            </div>
+
+
+            <div class="country">
+                <label for="country-s">Country*</label>
+                <select id="country-s" name="country" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Åland Islands">Åland Islands</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="American Samoa">American Samoa</option>
+                    <option value="Andorra">Andorra</option>
+                </select>
+            </div>
+
+            <div class="address">
+                <div class="street">
+                    <label for="street-address-s">Street adress*</label>
+                    <input type="text" id="street-address-s" required>
+                </div>
+                <div class="post">
+                    <label for="post-code-s">Post code*</label>
+                    <input type="tel" id="post-code-s" pattern="[0-9]{4}" placeholder="1234" minlength="4" maxlength="4"
+                        required>
+                </div>
+            </div>
+
+            <div class="description">
+                <div class="description-text">
+                    <label for="profile-description">Profile description</label>
+                    <p class="under-description">Please provide a short
+                        description of yourself to be
+                        displayed on our social
+                        community pages.</p>
+                </div>
+
+                <div class="textarea">
+                    <textarea  id="profile-description" name="comment" maxlength="500"></textarea>
+                </div>
+            </div>
+
+            <p class="text60">Use the same address for billing and shipping? Uncheck below to fill out a separate shipping address.
+            </p>
+
+            <div class="shipping">
+                <div><label for="shipping-address"> Shipping address</label></div>
+                <div><input type="checkbox" class="checkbox-shape" name="shipping adress" id="shipping-address"
+                        value="send" checked></div>
+            </div>
+
+            <div class="container2">
+                <div class="title">Shipping address</div>
+                <div class="name">
+                    <div class="f-name">
+                        <label for="first-name">First name*</label>
+                        <input type="text" id="first-name" required>
+                    </div>
+                    <div class="l-name">
+                        <label for="last-name">Last name*</label>
+                        <input type="text" id="last-name" required>
+                    </div>
+                </div>
+
+
+                <div class="country">
+                    <label for="country">Country*</label>
+                        <select id="country" name="country" required>
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Åland Islands">Åland Islands</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="American Samoa">American Samoa</option>
+                        <option value="Andorra">Andorra</option>
+                    </select>
+                </div>
+
+                <div class="address">
+                    <div class="street">
+                        <label for="street-address">Street adress*</label>
+                        <input type="text" id="street-address" required>
+                    </div>
+                    <div class="post">
+                        <label for="post-code">Post code*</label>
+                        <input type="tel" id="post-code" pattern="[0-9]{4}" placeholder="1234" minlength="4"
+                            maxlength="4" required>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button class="btn-p1" type="submit">Next Step</button>
+            </div>
+
+
+
+
+        </form>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".container2").hide();
+
+
+            $("#shipping-address").click(function () {
+                showHideShippingAddress();
+            });
+
+            function showHideShippingAddress() {
+                if ($(".container2").is(":visible")) {
+                    $(".container2").hide();
+                }
+                else {
+                    $(".container2").show();
+                }
+            }
+
+            $(".btn-p1").click(function () {
+                if (!$(".container2").is(":visible")) {
+                    setShippingAddress();
+                }
+                $(".btn-p1").submit();
+            });
+
+            function setShippingAddress() {
+                $("#first-name").val($("#first-name-s").val());
+                $("#last-name").val($("#last-name-s").val());
+                $("#country").val($("#country-s").val());
+                $("#street-address").val($("#street-address-s").val());
+                $("#post-code").val($("#post-code-s").val());
+            }
+        });
+    </script>
+</body>
+
+</html>
