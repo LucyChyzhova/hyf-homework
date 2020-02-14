@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Step2</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">Logo</div>
+            <div class="navigation">Navigation</div>
+        </div>
+    </header>
+
+    <div class="text">
+        <h1>Sign up to yourcustomtailor.com</h1>
+        <h2>Step 2/4 - How can we reach you?</h2>
+        <p class="bold">Progress</p>
+       <!-- <div class="progress-bar">
+            <div class="w-50"></div>
+            <div class="w-100"></div>
+        </div>-->
+        <div class="meter">
+            <div class="line line-50"><div class="progress line"></div>
+            </div>
+        </div>
+
+        <p class="text60">We will probably need to stay in touchsomehow. Let is know how we can reach you?
+        </p>
+    </div>
+
+    <form action="index3.html" method="POST">
+
+        <div class="email-phone">
+            <div class="email">
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="phone">
+                <label for="phone">Phone*</label>
+                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-45-678"
+                    minlength="10" maxlength="10" id="phone">
+            </div>
+        </div>
+
+        <div class="password">
+            <label for="pwd">Password*:</label>
+            <input type="password" id="pwd" name="pwd" minlength="10" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" required>
+        </div>
+
+        <div class="re-password">
+            <label for="re-pwd">Re-enter Password*:</label>
+            <input type="password" id="re-pwd" name="repwd" minlength="10" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" required>
+        </div>
+
+        <p class="text60">I want to sign up for the newsletter</p>
+
+        <div class="radio-button">
+            <div class="w-news">
+                <label for="weekly-news">Weekly news</label>
+                <input type="radio" class="checkbox-shape" id="weekly-news" name="frequency" value="weekly news"
+                    checked>
+            </div>
+            <div class="m-news">
+                <label for="monthly-news">Monthly news</label>
+                <input type="radio" class="checkbox-shape" id="monthly-news" name="frequency" value="monthly-news">
+            </div>
+            <div class="n-news">
+                <label for="no-news">Don't send me news</label>
+                <input type="radio" class="checkbox-shape" id="no-news" name="frequency" value="no news">
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="btn-p2" type="submit">Next Step</button>
+        </div>
+    </form>
+</body>
+
+</html>
