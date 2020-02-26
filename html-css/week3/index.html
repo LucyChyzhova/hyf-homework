@@ -19,9 +19,9 @@
 
     <div class="text">
         <h1>Sign up to yourcustomtailor.com</h1>
-        <p class="text60">We can’t wait to help you improve your life-style and gain the attention from people around
+        <p class="text-width-60">We can’t wait to help you improve your life-style and gain the attention from people around
             you!</p> 
-            <p class="text60">Signup below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy
+            <p class="text-width-60">Signup below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy
             picking the best offers that match your preferences and style. Every week we will send you a
             hand-picked selection - we just need to know a few details about your first…</p>
         <h2>Step 1/4 - tell us who you are?</h2>
@@ -32,7 +32,7 @@
             </div>
         </div>
     
-        <p class="text60">Nice to meet you! Let's spend a minute to get to know each other? Please enter the
+        <p class="text-width-60">Nice to meet you! Let's spend a minute to get to know each other? Please enter the
             following:
         </p>
     </div>
@@ -42,12 +42,12 @@
         <form action="step2.html" method="POST">
             <div class="name">
                 <div class="f-name">
-                    <label for="first-name-s">First name*</label>
-                    <input type="text" id="first-name-s" required>
+                    <label for="first-name-shipping">First name*</label>
+                    <input type="text" id="first-name-shipping" required>
                 </div>
                 <div class="l-name">
-                    <label for="last-name-s">Last name*</label>
-                    <input type="text" id="last-name-s" required>
+                    <label for="last-name-shipping">Last name*</label>
+                    <input type="text" id="last-name-shipping" required>
                 </div>
             </div>
 
@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-            <p class="text60">Use the same address for billing and shipping? Uncheck below to fill out a separate shipping address.
+            <p class="text-width-60">Use the same address for billing and shipping? Uncheck below to fill out a separate shipping address.
             </p>
 
             <div class="shipping">
@@ -175,8 +175,8 @@
             });
 
             function setShippingAddress() {
-                $("#first-name").val($("#first-name-s").val());
-                $("#last-name").val($("#last-name-s").val());
+                $("#first-name").val($("#first-name-shipping").val());
+                $("#last-name").val($("#last-name-shipping").val());
                 $("#country").val($("#country-s").val());
                 $("#street-address").val($("#street-address-s").val());
                 $("#post-code").val($("#post-code-s").val());

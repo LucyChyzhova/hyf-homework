@@ -27,7 +27,7 @@
 .text{
   margin-left: 5px;
 }
-.text60 {
+.text-width-60 {
   width: 60%;
   margin-left: 5px;
 }
@@ -277,16 +277,16 @@ button:hover:not(.active) {
   margin: 5px 50px 5px 5px;
 }
 
-.w-news,
-.m-news,
-.n-news {
+.weekly-news,
+.monthly-news,
+.no-news {
   display: flex;
   align-content: center;
   align-items: center;
   margin: 5px;
 }
 
-.w-news{
+.weekly-news{
   margin: 5px 40px 5px 5px;
 }
 
