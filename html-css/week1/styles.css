@@ -1,6 +1,6 @@
 
 body{
-  font-family: "Curier New", Courier, monospace;
+  font-family:'Open Sans',sans-serif;
   margin-left: 2%;
   
   color: rgb(24, 23, 23);
@@ -42,7 +42,7 @@ h1{
   margin-top: 0;
 }
   
-h3{
+h3,h2{
   font-size: 16px;
   margin-top: 0;
 }
@@ -73,6 +73,8 @@ h3{
   justify-content: left;
   margin-top: 2%;
   position: fixed;
+  list-style: none;
+  padding-left: 0;
 }
 
 .networking a{
@@ -81,7 +83,9 @@ h3{
   font-size: 22px;
   opacity: 0.7;
 }
-
+.networking li{
+  padding-top: 20px;
+}
 .networking a:hover:not(.active){
   opacity: 1;
 }
@@ -247,7 +251,7 @@ a:link{
         margin-bottom: 5px;
     }
 
-    h3{
+    h3,h2{
         font-size: 10px;
     }
         
