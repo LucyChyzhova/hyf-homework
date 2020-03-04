@@ -1,6 +1,6 @@
 //Age-ify (A future age calculator)
-let yearOfBirth = 1989;
-let yearFuture = 2027;
+const yearOfBirth = 1989;
+const yearFuture = 2027;
 
 let age = yearFuture - yearOfBirth;
 
