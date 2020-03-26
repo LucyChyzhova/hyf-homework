@@ -1,4 +1,4 @@
-const songDatabase = [
+let songDatabase = [
   {
     songId: 1,
     title: "My baby",
@@ -20,33 +20,16 @@ const songDatabase = [
     artist: "The spies girls"
   }
 ];
-
-//add song
-let updatedSongDatabase = addSongToDatabase(songDatabase);
-console.log("Songs database with a new song: ");
-console.log(updatedSongDatabase);
-
-//Searching for a song
-const songTitle = "3 nails in wood";
-let songByTitle = getSongByTitle(songDatabase, songTitle);
-console.log("Found song by title: ");
-console.log(songByTitle);
-
-//Create our own playlist
 let myPlaylist = [];
-let updatedMyPlaylist = addSongToMyPlaylist(songDatabase, myPlaylist,"yellow submarine");
-console.log("Added a new song to my the playlist: ");
-console.log(updatedMyPlaylist);
+const songTitle = "3 nails in wood";
+const song = {
+  songId: 5,
+  title: "yellow submarine",
+  artist: "The Beatles"
+};
 
-function addSongToDatabase(songs) {  
-  const song = {
-    songId: 5,
-    title: "yellow submarine",
-    artist: "The Beatles"
-  };
-
+function addSongToDatabase(songs, song) {  
   songs.push(song);
-
   return songs;
 }
 
@@ -62,3 +45,23 @@ function addSongToMyPlaylist(songs, playlist, title) {
 
   return playlist;
 }
+
+
+songDatabase = addSongToDatabase(songDatabase, song);
+console.log("Songs database with a new song: ");
+console.log(songDatabase);
+
+
+let songByTitle = getSongByTitle(songDatabase, songTitle);
+console.log("Found song by title: ");
+console.log(songByTitle);
+
+
+myPlaylist = addSongToMyPlaylist(songDatabase, myPlaylist,"yellow submarine");
+console.log("Added a new song to my the playlist: ");
+console.log(myPlaylist);
+
+
+
+
+

@@ -12,9 +12,9 @@ const names = [
 const nameToRemove = "Ahmad";
 
 // Write some code here
-const newNames = names.indexOf(nameToRemove);
-if (newNames > -1) {
-  names.splice(newNames, 1);
+const foundIndex = names.indexOf(nameToRemove);
+if (foundIndex > -1) {
+  names.splice(foundIndex, 1);
 }
 
 // Code done

@@ -25,45 +25,34 @@ const seriesDurations = [
   }
 ];
 
-const daysInYear = 365.2425;
-const hoursInDay = 24;
-const minutesInHour = 60;
+const DAYS_IN_YEAR = 365.2425;
+const HOURS_IN_DAY = 24;
+const MINUTES_IN_HOUR = 60;
 const averageLifeDurationInYears = 80;
-
-for (i = 0; i < seriesDurations.length; i++){
-  let percentageOfLifeTimeForTvSeries = getPercentageOfLifeTimeForTvSeries(seriesDurations[i]);
-
-  console.log(seriesDurations[i].title + " took " + percentageOfLifeTimeForTvSeries.toFixed(4) + "% of my life");
-}
-
-//----------------------------------------------------------------------
 
 function getPercentageOfLifeTimeForTvSeries(tvSeries) {
   let tvSeriesDurationInMinutes = getSeriesDurationInMinutes(tvSeries);
-  let avarageLifeDurationInMinutes = getAvarageLifeDurationInMinutes();
+  let avarageLifeDurationInMinutes = averageLifeDurationInYears * DAYS_IN_YEAR * HOURS_IN_DAY * MINUTES_IN_HOUR;
   let percentageOfLifeTimeForTvSeries = calculatePercentageOfLifeTimeForTvSeries(tvSeriesDurationInMinutes, avarageLifeDurationInMinutes);
 
   return percentageOfLifeTimeForTvSeries;
 }
 
 function getSeriesDurationInMinutes(tvSeries) { 
-  const tvSeriesInMinutes =
-    (tvSeries.days * hoursInDay + tvSeries.hours) * minutesInHour +
-    tvSeries.minutes;
-
+  const tvSeriesInMinutes = (tvSeries.days * HOURS_IN_DAY + tvSeries.hours) * MINUTES_IN_HOUR + tvSeries.minutes;
+  
   return tvSeriesInMinutes;
-}
-
-function getAvarageLifeDurationInMinutes() {
-  const averageLifeDurationInMinutes =
-    averageLifeDurationInYears * daysInYear * hoursInDay * minutesInHour;
-
-  return averageLifeDurationInMinutes;
 }
 
 function calculatePercentageOfLifeTimeForTvSeries(tvSeriesDurationInMinutes, avarageLifeDurationInMinutes)
 {
-    let percentageOfLifeTime = (tvSeriesDurationInMinutes * 100)/avarageLifeDurationInMinutes;
-
-    return percentageOfLifeTime;
+  let percentageOfLifeTime = (tvSeriesDurationInMinutes * 100)/avarageLifeDurationInMinutes;
+  
+  return percentageOfLifeTime;
 }
+
+for (i = 0; i < seriesDurations.length; i++){
+  let percentageOfLifeTimeForTvSeries = getPercentageOfLifeTimeForTvSeries(seriesDurations[i]);
+  console.log(seriesDurations[i].title + ' took ' + percentageOfLifeTimeForTvSeries.toFixed(3) + '% of my life');
+}
+
