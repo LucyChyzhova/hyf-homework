@@ -14,9 +14,9 @@ function getHousePricesAnalytics(housePrices) {
   let median = (housePrices[lowMiddle] + housePrices[highMiddle]) / 2;
 
   //object
-  const adaptedAverageandMedian = { average: adaptedAverage, median: median };
-
-  return adaptedAverageandMedian;
+  
+  return { average: adaptedAverage, median: median }
+ 
 }
 
 const housePricesAnalytics = getHousePricesAnalytics(housePrices);

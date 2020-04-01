@@ -23,7 +23,7 @@ function getSpiritAnimalName() {
     return;
   }
 
-  let userAnimalSpiritName = document.getElementById("userAnimalSpiritName");
+  const userAnimalSpiritName = document.getElementById("userAnimalSpiritName");
   userAnimalSpiritName.innerText = userName + " - " + spiritAnimalName;
 }
 
@@ -34,7 +34,7 @@ function addSpiritAnimalName() {
 }
 
 function getRandomSpritAnimalName() {
-  let spritAnimalNameIndex = Math.floor(Math.random() * spritAnimalNames.length);
+  const spritAnimalNameIndex = Math.floor(Math.random() * spritAnimalNames.length);
   let spritAnimalName = spritAnimalNames[spritAnimalNameIndex];
   return spritAnimalName;
 }
