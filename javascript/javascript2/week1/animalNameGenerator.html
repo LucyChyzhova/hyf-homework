@@ -1,0 +1,32 @@
+<!--Spirit animal name generator
+Let's create a page where a user writes his name in an input element. 
+The user then clicks a button. 
+The user will now receive a spirit animal name, fx Benjamin - The fullmoon wolf.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname">
+  <br>
+  <br>
+  <button onclick="getSpiritAnimalName()">Get spirit animal name</button>
+  <br>
+  <p id="userAnimalSpiritName"></p>
+  <br>
+  <label for="newSpiritAnimalName">NewSpiritAnimalName:</label>
+  <input type="text" id="newSpiritAnimalName" name="newSpiritAnimalName">
+  <br>
+  <br>
+  <button onclick="addSpiritAnimalName()">Add spirit animal name</button>
+  
+  <script src="spiritAnimalName.js"></script>
+</body>
+
+</html>
