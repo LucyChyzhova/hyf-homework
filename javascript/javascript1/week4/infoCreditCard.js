@@ -1,11 +1,16 @@
 //Credit card info
 
-let number = '4781321334789876';
+let number = '4026321334789876';
 
 function GetCardType(number)
 {
+    // Visa Electron
+    let regularExp = new RegExp("^(4026|417500|4508|4844|491(3|7))");
+    if (number.match(regularExp) != null)
+        return "Visa Electron";
+
     // visa
-    let regularExp = new RegExp("^4");
+    regularExp = new RegExp("^4");
     if (number.match(regularExp) != null)
         return "Visa";
 
@@ -14,11 +19,7 @@ function GetCardType(number)
     if (number.match(regularExp) != null)
         return "Mastercard";
 
-    // Visa Electron
-    regularExp = new RegExp("^(4026|417500|4508|4844|491(3|7))");
-    if (number.match(regularExp) != null)
-        return "Visa Electron";
-
+        
     return "";
 }
 
