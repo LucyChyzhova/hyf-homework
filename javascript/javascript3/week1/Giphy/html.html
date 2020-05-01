@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="flex-container">
+
+        <div class="gif">
+
+            <div class="input-gif gif-searcher">
+                <label for="gif">What are you looking for?</label><br><br>
+                <input type="text" id="gif" placeholder="Smile" required>
+            </div>
+            <div class="input-gif gif-amount">
+                <label for="amount">Hom many gif?</label><br><br>
+                <input type="number" id="amount" min="1" required>
+            </div>
+
+        </div>
+        <div>
+            <button id="btn" type="submit">Search</button>
+        </div>
+
+    </div>
+
+    <div class="gif-content"></div>
+    <div class="content"></div>
+
+    <script src="js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="city">
+            <label for="city-name">Enter your current city</label><br><br>
+            <input type="text" id="city-name" placeholder="Add your city" required>
+        </div>
+
+        <div>
+            <button id="btn" type="submit">Show forecast</button>
+        </div>
+    </div>
+    <div class="units">
+        <div><label for="imperial">Imperial </label></div>
+        <div> <input type="checkbox" class="checkbox-shape" id="imperial" name="frequency" value="unchecked"></div>
+    </div>
+    <div id="currentCity"></div>
+    <script SRC="forecast.js"></script>
+</body>
+
+</html>
