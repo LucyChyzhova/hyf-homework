@@ -17,8 +17,10 @@
 }
 input{
     width: 290px;
-    height: 30px;
-  
+    height: 30px; 
+}
+label span{
+display: block;
 }
 #btn{
     background-color: rgb(13, 228, 103);

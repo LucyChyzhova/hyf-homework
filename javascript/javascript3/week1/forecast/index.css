@@ -17,7 +17,6 @@ body{
 a{
    text-decoration: none;
 }
-
 .flex-container{
     display: flex;
     flex-direction: column;
@@ -25,7 +24,6 @@ a{
     align-items: center;
     justify-content: flex-end;
 }
-
 .city{
     margin-top: 50px;
     margin-bottom: 15px;
@@ -45,7 +43,6 @@ a{
 ::placeholder {
     color: rgb(13, 160, 228);  
 }
-
 #btn{
     background-color: rgb(13, 160, 228);
     color: rgb(255, 255, 255);
@@ -60,13 +57,11 @@ h1, #slogan{
     margin-bottom: 10px;
     color: rgb(13, 160, 228);
 }
-
 #error, .loading{
     text-align: center;
     margin-top: 30px;
     color: rgb(255, 207, 47);
 }
-
 .weather-description{
     display:flex;
     flex-direction: row;

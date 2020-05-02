@@ -1,9 +1,9 @@
 const bookShop =`{
-    "specifications":"children leterature",
-    "author":"Astrid Lindgren",
+    "specifications": "children leterature",
+    "author": "Astrid Lindgren",
     "bookId": 241,
     "pages": 95,
-    "condition":"new"
+    "condition": "new"
 }`
 
 console.log(bookShop)
