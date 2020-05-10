@@ -1,0 +1,54 @@
+
+#secSetup{
+    width: 200px;
+    height: 40px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    text-align: center;
+
+}
+#startBtn{
+    background-color: rgb(75, 199, 75);
+    color: white;
+    width: 100px;
+    height: 35px;
+    margin-bottom: 20px; 
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gameArea{
+    display: flex;
+    flex-direction: row;
+}
+.box{
+    border-top: 3px solid rgb(19, 18, 18);
+    width:400px;
+    height: 350px;
+    color: thistle;
+    text-align: center;
+    align-items: center;
+}
+.rightBorder{
+    border-right: 3px solid rgb(19, 18, 18);
+}
+h2{
+    margin: 30px;
+    color: rgb(126, 11, 55);
+}
+.players{
+    color: rgb(105, 12, 105);
+    font-size: 20px;
+}
+#my-canvasS, 
+#my-canvasL{
+    width: 400px;
+    height: 200px;
+}
+p{
+    color: rgb(177, 13, 13);
+    font-size: 24px;
+}
+

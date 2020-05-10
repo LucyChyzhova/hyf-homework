@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="center">
+        <h1>Fastest presser</h1>
+        <div>
+            <input id="secSetup" type="number" name="quantity" min="1" placeholder="Set seconds" required>
+        </div>
+        <div>
+            <button id="startBtn">Start game</button>
+        </div>
+
+        <div class="alert"></div>
+
+        <div class="gameArea">
+            <div class="box rightBorder">
+                <p class="players">Press S</p>
+                <p id="resultS"></p>
+                <h2>
+                    <p id="winnerS"></p>
+                </h2>
+                <canvas id="my-canvasS"></canvas>
+            </div>
+            
+            <div class="box">
+                <p class="players">Press L</p>
+                <p id="resultL"></p>
+                <h2>
+                    <p id="winnerL"></p>
+                </h2>
+                <canvas id="my-canvasL"></canvas>
+            </div>
+         
+        </div>
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.13/dist/index.min.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
