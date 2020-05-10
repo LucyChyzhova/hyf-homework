@@ -46,6 +46,9 @@ h2{
 #my-canvasL{
     width: 400px;
     height: 200px;
-   
+}
+p{
+    color: rgb(177, 13, 13);
+    font-size: 24px;
 }
 

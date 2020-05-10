@@ -35,7 +35,7 @@ console.log(mult(2, 3));
 
 //Create an object that has a key which value is a function. Try calling this function.
 
-let student = {
+const student = {
   age: function ageCounter(birthYear, currentYear) {
                 return currentYear - birthYear;
   }

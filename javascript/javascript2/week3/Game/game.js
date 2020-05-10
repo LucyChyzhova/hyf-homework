@@ -10,7 +10,14 @@ const listenForClick = function (event) {
   const secSetup = document.getElementById("secSetup").value;
 
   if (secSetup === "" || secSetup <= 0) {
-    alert("fill up the time-window. it has to be more than 1");
+    const alertDiv = document.querySelector('.alert')
+    const content = `
+      <p>${'Fill up the time-window. It has to be more than 1'}</p>
+    `
+
+    alertDiv.innerHTML = content
+    
+    //alert("fill up the time-window. it has to be more than 1");
     return;
   }
 
@@ -37,7 +44,14 @@ const listenForClick = function (event) {
 
   setTimeout(() => {
     startBtn = false;
-    alert("the game is over");
+    alertDiv = document.querySelector('.alert')
+    content = `
+      <p>${'The game is over'}</p>
+    `
+
+    alertDiv.innerHTML = content
+    
+    //alert("the game is over");
     showScore("resultL", counterL, "player 2");
     showScore("resultS", counterS, "player 1");
     getWinner(counterL, counterS);
@@ -80,7 +94,13 @@ function getWinner(counterL, counterS) {
 
     confettiS.render();
   } else {
-    alert("player 1 and player 2 have the same score");
+    alertDiv = document.querySelector('.alert')
+    content = `
+      <p>${'Player 1 and player 2 have the same score'}</p>
+    `
+
+    alertDiv.innerHTML = content
+    //alert("player 1 and player 2 have the same score");
   }
 }
 
