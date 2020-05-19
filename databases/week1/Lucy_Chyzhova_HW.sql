@@ -1,8 +1,11 @@
 -- Find out how many tasks are in the task table         
-SELECT COUNT(id) AS amount_of_task FROM task; -- or (*) 
+SELECT COUNT(id) AS amount_of_task  -- or (*) 
+FROM task; 
 
 -- Find out how many tasks in the task table do not have a valid due date  
-SELECT COUNT(task.id) AS task_count FROM task WHERE due_date is null; 
+SELECT COUNT(task.id) AS task_count 
+FROM task 
+WHERE due_date is null; 
 
 -- Find all the tasks that are marked as done            
 SELECT task.title, status.name AS status_as_text
