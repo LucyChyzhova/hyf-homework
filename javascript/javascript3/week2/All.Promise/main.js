@@ -23,8 +23,8 @@ function translateAllAtOnce() {
     moveElement(redCircle, { x: 20, y: 300 }),
     moveElement(blueCircle, { x: 400, y: 300 }),
     moveElement(greenCircle, { x: 400, y: 20 }),
-  ]).then(() => console.log('All circles has been moved'));
+  ]);
 }
+translateAllAtOnce().then(() => console.log('All circles have been moved'));
 
-translateAllAtOnce();
 translateOneByOne();

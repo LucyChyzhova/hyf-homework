@@ -30,7 +30,7 @@ const setTimeoutPromise = (timeInMilliseconds) => {
   });
 };
 
-setTimeoutPromise(3)
+setTimeoutPromise(3000)
   .then((result) => {
     console.log("my promise", result);
   })
@@ -38,13 +38,13 @@ setTimeoutPromise(3)
     console.log("error", error);
   });
 
-const getCurrentLocation = (positionIsFound) => {
+const getCurrentLocation = () => {
   return new Promise((resolve, reject) => {
-    if (positionIsFound) {
-      resolve("you have a good position");
-    } else {
-      reject("your position has not been found");
-    }
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(resolve);
+      } else {
+          reject("your position has not been found");
+      }
   });
 };
 

@@ -14,7 +14,7 @@ const timeDelate = (resolveAfter) => {
     return new Promise((resolve) => {
     setTimeout(() => {
             resolve("I am called asynchronously");
-    },resolveAfter* 2000);
+    },resolveAfter * 2000);
 });
 };
 timeDelate(2)
