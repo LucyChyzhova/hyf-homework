@@ -34,7 +34,7 @@ CREATE  UNIQUE INDEX some_index_name ON Student(name); -- OR-- CREATE INDEX ON S
 
 -- step 1 I created a new table 'status'
 CREATE TABLE Status (   
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     status VARCHAR(50) NOT NULL
 );
 INSERT INTO status (id, status)
