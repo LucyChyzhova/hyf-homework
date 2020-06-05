@@ -10,12 +10,10 @@ When you have the data for the different repositories, render the fullname of th
 url of the repo, and the owner of the repo. See github-repos as an example of how the renderered repos should look. 
 You are more than welcome to style it a bit nicer!*/
 
-const urlPanivita =
-  "https://api.github.com/search/repositories?q=user:panivita";
-const urlFzscodes =
-  "https://api.github.com/search/repositories?q=user:fzscodes";
-const urlBasafilm =
-  "https://api.github.com/search/repositories?q=user:basafilm";
+const url = "https://api.github.com/search/repositories?q=user:";
+const urlPanivita = url + "panivita";
+const urlFzscodes = url + "fzscodes";
+const urlBasafilm = url + "basafilm";
 
 const getData = (url) => {
   fetch(url)

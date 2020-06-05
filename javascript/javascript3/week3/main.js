@@ -44,10 +44,14 @@ function getRandomColor() {
   return fillColor;
 }
 
+function getRandomNum(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 const createRandomCircle = () => {
-  let x = Math.floor(Math.random() * canvas.width + 50);
-  let y = Math.floor(Math.random() * canvas.height + 50);
-  let r = Math.floor(Math.random() * 900 + 10);
+  let x = getRandomNum(canvas.width);
+  let y = getRandomNum(canvas.height);
+  let r = getRandomNum(900);
   let fillColor = getRandomColor();
 
   const circle = new Circle(x, y, r, 0, 2 * Math.PI, fillColor);
