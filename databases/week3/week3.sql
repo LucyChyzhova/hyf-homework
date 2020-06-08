@@ -77,7 +77,7 @@ WHERE id = 1;
 SELECT * FROM review;  
 
 -- Add a new review  
-INSERT INTO review (title, description, meal_id, stasr, created_date )
+INSERT INTO review (title, description, meal_id, stars, created_date )
 VALUES ('perfect', 'meal was amaizing', '2', '5', '2020-06-01');                    
 
 -- Get a review with any id, fx 1
@@ -95,6 +95,14 @@ WHERE id = 1;
 -- Additional queries
 /*Now add a couple of different meals, reservations and reviews with different attributes. With those meals create the following queries*/
 
+						-- TABLE MEAL --
+INSERT INTO meal ( title, description, location, `when`, max_reservation, price, created_date)
+VALUES ('supe', 'with meat bolls', 'south', '2020-06-8', '2', 20.50, '2020-06-04');
+INSERT INTO meal ( title, description, location, `when`, max_reservation, price, created_date)
+VALUES ('spaghetti', 'with  basilic', 'west', '2020-06-10', '3', 45, '2020-06-04');
+INSERT INTO meal ( title, description, location, `when`, max_reservation, price, created_date)
+VALUES ('ice cream', 'organic', 'city center', '2020-06-15', '5', 45, '2020-06-04');
+
 						-- TABLE REVIEW--
 INSERT INTO review (title, description, meal_id, stars, created_date )
 VALUES ('amazing', 'super cervice', '2', '5', '2020-06-01');
@@ -111,14 +119,6 @@ VALUES ('1', '4', '2020-06-03');
 INSERT INTO reservation (number_of_guests, meal_id, created_date)
 VALUES ('2', '3', '2020-06-07');
 
-						-- TABLE MEAL --
-INSERT INTO meal ( title, description, location, `when`, max_reservation, price, created_date)
-VALUES ('supe', 'with meat bolls', 'south', '2020-06-8', '2', 20.50, '2020-06-04');
-INSERT INTO meal ( title, description, location, `when`, max_reservation, price, created_date)
-VALUES ('spaghetti', 'with  basilic', 'west', '2020-06-10', '3', 45, '2020-06-04');
-INSERT INTO meal ( title, description, location, `when`, max_reservation, price, created_date)
-VALUES ('ice cream', 'organic', 'city center', '2020-06-15', '5', 45, '2020-06-04');
-
 -- Functionality
 -- Get meals that has a price smaller than a specific price fx 90
 SELECT title FROM meal
@@ -133,7 +133,7 @@ WHERE max_reservations > reserved_meals_count;
 
 -- Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT title FROM meal
-WHERE title LIKE 's%';
+WHERE title LIKE '%s%';
 
 -- Get meals that has been created between two dates
 SELECT title FROM meal
@@ -144,15 +144,18 @@ SELECT * FROM meal
 LIMIT 2;
 
 -- Get the meals that have good reviews
-SELECT meal.title, review.stars
+SELECT meal.title, review.stars, AVG(review.stars)  AS average
 FROM review
 INNER JOIN meal ON meal.id = review.meal_id
-WHERE review.stars > '3';
+WHERE review.stars > '3'
+GROUP BY meal.title
+ORDER BY average;
 
 -- Get reservations for a specific meal sorted by created_date
 SELECT meal.title, reservation.created_date
 FROM reservation
 INNER JOIN meal ON meal.id = reservation.meal_id
+WHERE title = 'supe'
 ORDER BY reservation.created_date;
 
 -- Sort all meals by average number of stars in the reviews
