@@ -159,11 +159,9 @@ WHERE title = 'supe'
 ORDER BY reservation.created_date;
 
 -- Sort all meals by average number of stars in the reviews
-SELECT meal.title, review.stars, AVG(review.stars)  AS average
+SELECT meal.*, AVG(review.stars)  AS average
 FROM review
 INNER JOIN meal ON meal.id = review.meal_id
-GROUP BY meal.title
-ORDER BY average;
-
-
+GROUP BY meal.id
+ORDER BY average DESC;
 
