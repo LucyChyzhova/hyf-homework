@@ -1,0 +1,31 @@
+{
+  "name": "hw",
+  "version": "1.0.0",
+  "description": "HomeWork",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node src/backend/index.js",
+    "dev": "nodemon src/backend/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucyChyzhova/hyf-homework.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "HomeWork"
+  ],
+  "author": "Lucy Chyzhova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucyChyzhova/hyf-homework/issues"
+  },
+  "homepage": "https://github.com/LucyChyzhova/hyf-homework#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
