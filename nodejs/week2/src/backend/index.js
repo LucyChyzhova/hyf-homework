@@ -19,6 +19,12 @@ app.get("/meals", mealsRouter);
 const mealsIdRouter = require("./routes/meals.js");
 app.get("/meals/:id", mealsIdRouter);
 
+const mealsMaxPrice = require("./routes/meals.js");
+app.get("/meals", mealsMaxPrice);
+
+const mealsWithMutchTitle = require("./routes/meals.js");
+app.get("/meals", mealsWithMutchTitle);
+
 ////cheap-meals///
 /*app.get("/cheap-meals", (request, response) => {
   let mealsData = getDataFromJson(meals);
