@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  margin: 5px;
+}
+ul, li{
+  list-style: none;
+  padding-left: 0;
+}
+.menu{
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: row;
+}
+#meal-title,
+.menu a,
+.meal-title a{
+padding-right: 10px;
+text-decoration: none;
+color: gray;
+font-size: 22px;
+}
+#meal-special-proposition{
+  padding-right: 10px;
+  font-size: 20px;
+}
+.menu a:hover,
+.meal-title a:hover{
+  color: rgb(231, 99, 38);
+  font-weight: bolder;
+}
+
+#logo{
+  width: 180px;
+  height: 165px;
+}
+
+.main-picture{
+width: 100%;
+display: flex;
+align-items: center;
+}
+
+.first-block,
+.logo{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flag{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap; 
+  height: 5%;
+}
+.line-green{
+  background-color: rgb(23, 126, 23);
+  height: 5%;
+  width: 70%;
+ 
+}
+.line-white{
+  background-color: rgb(255, 255, 255);
+  height: 5%;
+  width: 5%;
+}
+
+.line-red{
+  background-color: rgb(253, 0, 0);
+  height: 5%;
+  width: 25%;
+}
+
+.footer{
+  background-color: rgb(23, 126, 23);
+  color: white;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contacts a{
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+.contacts p{
+font-size: 12px;
+}
+
+.chef-img{
+  width: 95px;
+  height: 116px;
+  padding-left: 18%;
+}
+
+/* special proposition page*/
+
+
+li{
+  list-style: none;
+}
+#meal-special-proposition{
+color:  rgb(231, 99, 38);
+}
+.form-header{
+font-size: 18px;
+color:  rgb(231, 99, 38);
+}
+
+.form-reservation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#number_of_guests{
+  width: 75px;
+}
+
+.submit-btn{
+  background-color:  rgb(23, 126, 23);
+  color:white;
+  border: none;
+  width:300px;
+  height: 40px;
+  border-radius: 3px;
+}
+
+/* meals*/
+
+.meals-flex{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+
+@media only screen and (max-width: 500px) {
+  #logo{
+    width: 120px;
+    height: 105px;
+  }
+  .menu a{
+  font-size: 14px;
+  }
+  .contacts p{
+    font-size: 8px;
+  }
+  .footer{
+    justify-content: center;
+  }
+  .chef-img{
+    width: 65px;
+    height: 84px;
+}
+
+}
