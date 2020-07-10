@@ -34,6 +34,14 @@ CREATE TABLE review (
 -- Get all meals
 SELECT * FROM meal;
 
+-- Add a new column 04-07-20
+ALTER TABLE meal
+ADD COLUMN picture varchar(255) AFTER title;
+
+-- Drope column
+ALTER TABLE meal
+DROP COLUMN picture;
+
 -- Add a new meal
 INSERT INTO meal ( title, description, location, `when`, max_reservation, price, created_date)
 VALUES ('pizza', '4 cheese', 'city center', '2020-06-7', '5', 99.50, '2020-06-01');
@@ -55,6 +63,14 @@ WHERE id = 1;
 						-- TABLE RESERVATION --
 -- Get all reservations
 SELECT * FROM reservation;
+
+-- Add a new columns 10-07-20
+ALTER TABLE reservation
+ADD COLUMN name varchar(255) AFTER id;
+ALTER TABLE reservation
+ADD COLUMN phone_number varchar(255) AFTER name;
+ALTER TABLE reservation
+ADD COLUMN email varchar(255) AFTER phone_number;
 
 -- Add a new reservation
 INSERT INTO reservation (number_of_guests, meal_id, created_date)
@@ -128,8 +144,8 @@ WHERE price < 50;
 SELECT meal.*
 FROM meal
 LEFT JOIN reservation ON meal.id = reservation.meal_id
-GROUP BY meal.id
-HAVING meal.max_reservation > COALESCE(SUM(reservation.number_of_guests), 0);
+ GROUP BY meal.id
+ HAVING meal.max_reservation > COALESCE(SUM(reservation.number_of_guests), 0);
 
 -- Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT title FROM meal
@@ -164,3 +180,6 @@ FROM review
 INNER JOIN meal ON meal.id = review.meal_id
 GROUP BY meal.id
 ORDER BY average DESC;
+
+
+
