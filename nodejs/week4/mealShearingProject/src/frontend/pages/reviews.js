@@ -22,7 +22,12 @@ function renderReviews(reviews) {
   reviews.forEach((review) => {
     const li = document.createElement("li");
 
-    li.innerHTML = review.description;
+    li.innerHTML =`
+    <div class="review">
+    <div><p>Date: ${review.created_date}</p></div>  
+    <div><p>Review: ${review.description} </p></div>
+    <div> <p>Stars:  ${review.stars}</p></div>
+    </div>`;
     ul.appendChild(li);
   });
 

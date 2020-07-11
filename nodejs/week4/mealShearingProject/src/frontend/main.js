@@ -7,3 +7,4 @@ router.on("/meals", window.handleMealsRequest).resolve();
 router.on("/meal/:id", window.handleMealRequest).resolve();
 router.on("/reviews", window.handleReviewsRequest).resolve();
 router.on("/reservations", window.handleReservationRequest).resolve(); // or reservationS
+router.on("/about", window.handleAboutRequest).resolve(); 

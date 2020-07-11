@@ -46,7 +46,7 @@ function renderMeal(meal) {
   meal.forEach((meal) => {
     const li = document.createElement("li");
     ul.innerHTML = meal.title;
-    li.innerHTML = `<img id="meal-${meal.id}" class="main-picture" src="${meal.picture}" alt="meal-img"></img>`;
+    li.innerHTML = `<img id="meal-${meal.id}" class="main-picture" src="${meal.picture}" alt="meal-img"></img> <p>${meal.description}</p> `;
     ul.appendChild(li);
   });
 

@@ -27,11 +27,11 @@ window.handleHomeRequest = () => {
   <div class="contacts">
   <p class="contact-title">Contacts:</p>
   <p>phone: +45 50154613</p>
-  <p><a href=liudmyla.chyzhova@gmail.com>liudmyla.chyzhova@gmail.com</a></p>
-  <p><a href= https://www.linkedin.com/in/liudmylachyzhova/</a>LinkedIn</p>
+  <p><a href="liudmyla.chyzhova@gmail.com">liudmyla.chyzhova@gmail.com></a></p>
+  <p><a href="https://www.linkedin.com/in/liudmylachyzhova/">LinkedIn</a></p>
   </div>
-  <img class="chef-img" src="https://live.staticflickr.com/65535/50090165377_b566bbf46f_o.jpg" alt="chef-img"> 
   <div>
+  <a href="/about" data-navigo> <img class="cheif-img" src="https://live.staticflickr.com/65535/50097908823_d32062acd9_m.jpg" alt="cheif-img"> </a>
   </div>
 
 </div>`;
