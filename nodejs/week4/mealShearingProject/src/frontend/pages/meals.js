@@ -9,12 +9,15 @@ window.handleMealsRequest = () => {
   <div><a href="meals" data-navigo>menu</a></div>
   <div><a href="meal/3" data-navigo>special proposition</a></div>
   <div><a href="reviews" data-navigo>reviews</a></div>
-  </div>`;
+  </div>
+  
+  `;
 
   // make sure the backend api works before working with it here
   fetch("/api/meals")
     .then((response) => response.json())
     .then(renderMeals);
+    
 };
 
 function renderMeals(meals) {
@@ -28,11 +31,12 @@ function renderMeals(meals) {
      
      <div class="meal-title"><a href="meal/${meal.id}" data-navigo>${meal.title}</a></div>
      <div> <a href="meal/${meal.id}" data-navigo><img id="meal-${meal.id}" class="main-picture" src="${meal.picture}" alt="meal-img"></img></a></div> 
-     
+    
      <div>`;
     ul.appendChild(li);
   });
 
   document.body.appendChild(ul);
 }
+
 

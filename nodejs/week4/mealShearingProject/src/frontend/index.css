@@ -21,7 +21,9 @@ padding-right: 10px;
 text-decoration: none;
 color: gray;
 font-size: 22px;
+background-color: white;
 }
+
 #meal-special-proposition{
   padding-right: 10px;
   font-size: 20px;
@@ -48,6 +50,7 @@ width: 100%;
 display: flex;
 align-items: center;
 }
+
 
 .first-block,
 .logo{
@@ -108,7 +111,11 @@ font-size: 12px;
 
 /* special proposition page*/
 
-
+.meal-title{
+  color: gray;
+font-size: 22px;
+background-color: white;
+}
 li{
   list-style: none;
 }

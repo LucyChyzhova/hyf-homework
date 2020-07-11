@@ -31,30 +31,6 @@ router.post("/", async function (req, res) {
   res.send("Thank you for your reservation. Reservation was added");
 });
 
-
-
-
-// "../../api/reservation" Adds a new reservation from MEAL  with PHONE NAME EMAIL
-/*router.post("/", async (request, response) => {
-  try {
-    const newName = request.body.name;
-    const newEmail = request.body.email;
-    console.log(`request.body = ${JSON.stringify(request.body)}; name = ${newName}, email = ${newEmail}`);
-    const newId = await Knex('reservation').insert(
-      {
-        name: newName,
-        email:newEmail,
-      }
-    );
-    response.json(`Thank you for your reservation. Reservation id is ${newId}`)
-  } catch (error) {
-    throw error;
-  }
-  })*/
-
-
-
-
 // api/reservations/{id}	GET	Returns reservation by id	GET api/reservations/2
 
 router.get("/:id", async (req, res) => {

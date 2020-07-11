@@ -69,6 +69,7 @@ router.get("/", async (req, res) => {
     if (maxPrice) {
       // api/meals?maxPrice=90
       result = await knex("meal").where("price", "<", maxPriceParse).select();
+      
     } else if (availableReservations) {
       //api/meals?availableReservations=true
       result = await knex
@@ -77,6 +78,7 @@ router.get("/", async (req, res) => {
         .groupBy("meal.id")        
         .having(knex.raw('meal.max_reservation > coalesce(sum(reservation.number_of_guests), 0)'))
         .select("meal.*");
+
     } else if (someTitle) {
       //api/meals?title=lasa
       result = await knex("meal")
