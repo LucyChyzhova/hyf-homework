@@ -27,9 +27,15 @@ font-size: 22px;
   font-size: 20px;
 }
 .menu a:hover,
-.meal-title a:hover{
+.meal-title a:hover,
+.social-net a:hover,
+.go-project-link a:hover{
   color: rgb(231, 99, 38);
   font-weight: bolder;
+}
+.go-project-link a{
+  text-decoration: none;
+  color:black;
 }
 
 #logo{
@@ -172,13 +178,22 @@ border-radius: 5px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 40%;
+  width: 50%;
 }
-.social-net{
+.social-net,
+.go-project-link{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width:200px;
 }
+.social-net a{
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+
 
 @media only screen and (max-width: 500px) {
   #logo{

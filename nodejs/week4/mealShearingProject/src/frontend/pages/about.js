@@ -15,19 +15,23 @@ window.handleAboutRequest = () => {
              I feel so powerful, just think I was starting from scratch and then this full backend and frontend stuff. 
              I don't want to list all programs and languages... BUT I will try it. 
              Here I used JavaScript, CSS, MySQL, PostMan, and Node.js </p>
-             <h3>Let's make projects togather!</h3>
+             <h3>Let's make projects or just drink a cup of coffee together!</h3>
             </div>
 
             <div class="social-net">
-            <div><p> Github </p></div>
-            <div><p> Gmail </p>
-            </div>
+            <div><a href="https://github.com/LucyChyzhova" target="_blank"><p> Github </p></a></div>
+            <div><p><a href="https://www.linkedin.com/in/liudmylachyzhova/" target="_blank">LinkedIn</a></p></div>
              </div>
+             <div class="go-project-link"><p>Go to Italian meal</p><p><a href="/" target="_blank">project</p></div>
         </div>
+
+        
 
         <div>
         <img src="https://live.staticflickr.com/65535/50097908823_d32062acd9.jpg" alt="Lucy Chyzhova img">
         </div>
+        
 
     </div> `
+    
 };

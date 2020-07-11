@@ -27,8 +27,8 @@ window.handleHomeRequest = () => {
   <div class="contacts">
   <p class="contact-title">Contacts:</p>
   <p>phone: +45 50154613</p>
-  <p><a href="liudmyla.chyzhova@gmail.com">liudmyla.chyzhova@gmail.com></a></p>
-  <p><a href="https://www.linkedin.com/in/liudmylachyzhova/">LinkedIn</a></p>
+  <p>liudmyla.chyzhova@gmail.com></p>
+  <p><a href="https://www.linkedin.com/in/liudmylachyzhova/" target="_blank">LinkedIn</a></p>
   </div>
   <div>
   <a href="/about" data-navigo> <img class="cheif-img" src="https://live.staticflickr.com/65535/50097908823_d32062acd9_m.jpg" alt="cheif-img"> </a>
