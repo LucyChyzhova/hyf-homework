@@ -1,5 +1,5 @@
 window.handleReservationRequest = () => {
-  document.body.innerHTML = `jjj`
+  document.body.innerHTML = 
 
   // make sure the backend api works before working with it here
   fetch(`/api/reservations`) // http://localhost:3000/reservation

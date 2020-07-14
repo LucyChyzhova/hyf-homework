@@ -7,7 +7,7 @@ window.handleReviewsRequest = () => {
 
   <div class="menu">
   <div><a href="meals" data-navigo>menu</a></div>
-  <div><a href="meal/3" data-navigo>special proposition</a></div>
+  <div><a href="meal/7" data-navigo>special proposition</a></div>
   <div><a href="reviews" data-navigo>reviews</a></div>
   </div>`;
 
@@ -15,6 +15,7 @@ window.handleReviewsRequest = () => {
   fetch("/api/reviews")
       .then((response) => response.json())
       .then(renderReviews);
+
 };
 function renderReviews(reviews) {
   const ul = document.createElement("ul");
@@ -22,11 +23,14 @@ function renderReviews(reviews) {
   reviews.forEach((review) => {
     const li = document.createElement("li");
 
-    li.innerHTML =`
+  let showDate = review.created_date;
+  let showOnlyDate = showDate.substr(0, 10);
+
+     li.innerHTML =`
     <div class="review">
-    <div><p>Date: ${review.created_date}</p></div>  
-    <div><p>Review: ${review.description} </p></div>
-    <div> <p>Stars:  ${review.stars}</p></div>
+    <div><p class="date">Date: ${showOnlyDate} </p></div>  
+    <div><p> ${review.description} </p></div>
+    <div><p class="star">Stars:  ${review.stars}</p></div>
     </div>`;
     ul.appendChild(li);
   });

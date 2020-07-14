@@ -59,7 +59,7 @@ function renderReservationForm(availableMeals, currentMealId) {
 
   <div class="menu">
   <div><a href="/meals" data-navigo>menu</a></div>
-  <div><a href="/meal/3" data-navigo>special proposition</a></div>
+  <div><a href="/meal/7" data-navigo>special proposition</a></div>
   <div><a href="/reviews" data-navigo>reviews</a></div>
   </div>
   ${orderForm}

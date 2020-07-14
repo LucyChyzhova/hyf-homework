@@ -37,8 +37,8 @@ router.put("/:id", async (req, res) => {
   console.log(`params.id=${req.params.id}`);
   const mealById = await knex("meal")
     .where({ id: req.params.id })
-    .update({ title: req.query.title });
-  res.send(`title of meal (id: ${req.params.id}) was changed`);
+    .update({ max_reservation: req.query.max_reservation });
+  res.send(`Amount of meal's reservation (id: ${req.params.id}) was changed`);
 });
 
 
