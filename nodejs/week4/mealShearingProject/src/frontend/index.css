@@ -156,14 +156,18 @@ input[type=text]{
 
 /*review*/
 .review{
-height: 100px;
 background-color: rgb(250, 250, 250);
 border-radius: 5px;
 margin-left: 15px;
+margin-bottom: 5px;
+display: flex;
+flex-direction: column;
+align-content:center;
 }
 .review p{
   padding-left: 4px;
   padding-top: 4px;
+  margin-bottom: 5px;
 }
 .date{
   color: green;
