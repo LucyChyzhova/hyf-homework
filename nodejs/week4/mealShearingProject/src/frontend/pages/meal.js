@@ -6,13 +6,10 @@ window.handleMealRequest = (params) => {
       (response) => (orderForm = renderReservationForm(response, params.id))
     );
 
-  // make sure the backend api works before working with it here
   fetch(`/api/meals/${params.id}`) // http://localhost:3000/meal/4
     .then((response) => response.json())
     .then(renderMeal);
 };
-
-///meals/{id}	Render the meal with the specific id. Add a form to create reservations for the meal
 
 function renderMeal(meal) {
   const ul = document.createElement("ul");
@@ -25,6 +22,21 @@ function renderMeal(meal) {
   });
 
   document.body.appendChild(ul);
+  const myfooter = document.createElement("div")
+  myfooter.innerHTML = `
+  <div class="footer">
+
+  <div class="contacts">
+  <p class="contact-title">Contacts:</p>
+  <p>phone: +45 50154613</p>
+  <p>liudmyla.chyzhova@gmail.com></p>
+  <p><a href="https://www.linkedin.com/in/liudmylachyzhova/" target="_blank">LinkedIn</a></p>
+  </div>
+  <div>
+  <a href="/about" data-navigo> <img class="cheif-img" src="https://live.staticflickr.com/65535/50097908823_d32062acd9_m.jpg" alt="cheif-img"> </a>
+  </div>
+</div>`
+  document.body.appendChild(myfooter);
 }
 
 function renderReservationForm(availableMeals, currentMealId) {
@@ -64,4 +76,5 @@ function renderReservationForm(availableMeals, currentMealId) {
   </div>
   ${orderForm}
   </div>`;
+
 }

@@ -1,5 +1,6 @@
 window.handleHomeRequest = () => {
   document.body.innerHTML = `
+  
   <div class="logo">
   <img id="logo" src="https://live.staticflickr.com/65535/50090093592_4a0c888221_o.jpg" alt="mealsShearing-logo"></img>
   </div>

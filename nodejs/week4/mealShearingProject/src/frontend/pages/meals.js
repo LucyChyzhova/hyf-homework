@@ -13,12 +13,9 @@ window.handleMealsRequest = () => {
   
   `;
 
-  // make sure the backend api works before working with it here
   fetch("/api/meals")
     .then((response) => response.json())
-    .then(renderMeals);
-    
-   
+    .then(renderMeals);  
 };
 
 function renderMeals(meals) {
@@ -29,16 +26,15 @@ function renderMeals(meals) {
 
     li.innerHTML = `
      <div class ="meals-flex">
-     
      <div class="meal-title"><a href="meal/${meal.id}" data-navigo>${meal.title}</a></div>
      <div> <a href="meal/${meal.id}" data-navigo><img id="meal-${meal.id}" class="main-picture" src="${meal.picture}" alt="meal-img"></img></a></div> 
-    
-     <div>`;
-    ul.appendChild(li);
+     </div> 
+     `;
 
-    
+    ul.appendChild(li);   
   });
- /*
+ 
+  document.body.appendChild(ul);
   const myfooter = document.createElement("div")
   myfooter.innerHTML = `
   <div class="footer">
@@ -53,9 +49,8 @@ function renderMeals(meals) {
   <a href="/about" data-navigo> <img class="cheif-img" src="https://live.staticflickr.com/65535/50097908823_d32062acd9_m.jpg" alt="cheif-img"> </a>
   </div>
 </div>`
-*/
-  document.body.appendChild(ul);/*
-  document.body.appendChild(myfooter);*/
+ 
+document.body.appendChild(myfooter);
 }
 
 

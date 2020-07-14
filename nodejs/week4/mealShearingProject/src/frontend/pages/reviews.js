@@ -27,6 +27,7 @@ function renderReviews(reviews) {
   let showOnlyDate = showDate.substr(0, 10);
 
      li.innerHTML =`
+     
     <div class="review">
     <div><p class="date">Date: ${showOnlyDate} </p></div>  
     <div><p> ${review.description} </p></div>
@@ -36,4 +37,22 @@ function renderReviews(reviews) {
   });
 
   document.body.appendChild(ul);
+  
+  document.body.appendChild(ul);
+
+  const myfooter = document.createElement("div")
+  myfooter.innerHTML = `
+  <div class="footer">
+
+  <div class="contacts">
+  <p class="contact-title">Contacts:</p>
+  <p>phone: +45 50154613</p>
+  <p>liudmyla.chyzhova@gmail.com></p>
+  <p><a href="https://www.linkedin.com/in/liudmylachyzhova/" target="_blank">LinkedIn</a></p>
+  </div>
+  <div>
+  <a href="/about" data-navigo> <img class="cheif-img" src="https://live.staticflickr.com/65535/50097908823_d32062acd9_m.jpg" alt="cheif-img"> </a>
+  </div>
+</div>`
+  document.body.appendChild(myfooter);
 }

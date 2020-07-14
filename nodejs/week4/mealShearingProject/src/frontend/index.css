@@ -91,6 +91,7 @@ align-items: center;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  
 }
 
 .contacts a{
@@ -152,14 +153,6 @@ input[type=text]{
   border-radius: 3px;
 }
 
-/* meals*/
-
-.meals-flex{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
 
 /*review*/
 .review{
