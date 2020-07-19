@@ -17,8 +17,7 @@ router.get("/", async (request, response) => {
 // api/reviews/	POST	Adds a new review	POST api/reviews/
 
 router.post("/", async function (req, res) {
-  console.log(req.body);
-  const newReview = {
+   const newReview = {
     title: req.query.title,
     description: req.query.description,
     meal_id: req.query.meal_id,
@@ -45,7 +44,7 @@ router.get("/:id", async (req, res) => {
 // api/reviews/{id}	PUT	Updates the review by id	PUT api/reviews/2
 
 router.put("/:id", async (req, res) => {
-  console.log(`params.id=${req.params.id}`);
+  
   const reviewById = await knex("review")
     .where({ id: req.params.id })
     .update({ stars: req.query.stars });

@@ -5,7 +5,7 @@ const path = require("path");
 
 const mealsRouter = require("./api/meals");
 const reservationRouter = require("./api/reservation");
-const reviewRouter = require("./api/review");
+const reviewsRouter = require("./api/review");//should I change to reviews???
 
 const port = process.env.PORT || 3000;
 
@@ -21,7 +21,7 @@ app.use(express.json());
 
 router.use("/meals", mealsRouter);
 router.use("/reservations", reservationRouter);
-router.use("/reviews", reviewRouter);
+router.use("/reviews", reviewsRouter);  //  take to backend table review
 
 app.use("/api", router);
 
