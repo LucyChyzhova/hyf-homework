@@ -9,7 +9,7 @@ app.get("/numbers/add", (req, res) => {
   let second = req.query.second;
   const sum = parseInt(first) + parseInt(second);
   let result;
-  if (isNaN(first) || isNaN(second)) {
+  if (Number.isNaN(first) || Number.isNaN(second)) { // added Number
     result = "both numbers should be written as a number";
   } else {
     result = `${first} + ${second} = ${sum}`;

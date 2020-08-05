@@ -1,21 +1,11 @@
 const express = require("express");
-const dataAccess = require("../dataAccess.js");
+
 const { response } = require("express");
-const router = express.Router();
+
 const meals = "/data/meals.json";
 const reviews = "/data/reviews.json";
 
-///meals	Respond with the json for all the meals with reviews
-/*
-router.get("/meals", (request, response) => {
-  let mealsData = dataAccess.getDataFromJson(meals);
-  let reviewsData = dataAccess.getDataFromJson(reviews);
-  let mealsWithReviews = mealsData.map((meal) => {
-    meal.review = reviewsData.filter((review) => review.id === meal.id);
-    return meal;
-  });
-  response.send(mealsWithReviews);
-});*/
+
 
 ///meals	Respond with the json for all the meals
 function getAllMeals(meals) {

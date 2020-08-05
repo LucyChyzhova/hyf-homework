@@ -3,13 +3,6 @@ const dataAccess = require("../dataAccess.js");
 const router = express.Router();
 const reviews = "/data/reviews.json";
 
-//all reviews
-/* 
-router.get("/reviews", (request, response) => {
-    let reviewsData = dataAccess.getDataFromJson(reviews);
-    response.send(reviewsData);
-  });*/
-
 ///reviews/{id}	Respond with the json for the review with the corresponding id
 router.get("/reviews/:id", (request, response) => {
   let reviewsData = dataAccess.getDataFromJson(reviews);

@@ -1,6 +1,4 @@
 const express = require("express");
-const dataAccess = require("../dataAccess.js");
-const router = express.Router();
 const meals = "/data/meals.json";
 const reviews = "/data/reviews.json";
 

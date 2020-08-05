@@ -8,4 +8,3 @@ exports.getDataFromJson = function (jsonPath) {
   return jsonFile;
 };
 
-//module.exports = dataAccess;
