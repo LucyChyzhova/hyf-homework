@@ -1,0 +1,31 @@
+{
+  "name": "warmup",
+  "version": "1.0.0",
+  "description": "warmup week2 node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node src/backend/index.js",
+    "dev": "nodemon src/backend/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucyChyzhova/hyf-homework.git"
+  },
+  "keywords": [
+    "warmup",
+    "week2"
+  ],
+  "author": "Lucy Chyzhova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucyChyzhova/hyf-homework/issues"
+  },
+  "homepage": "https://github.com/LucyChyzhova/hyf-homework#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
