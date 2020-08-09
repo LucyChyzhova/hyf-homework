@@ -1,0 +1,12 @@
+h1, .taskList{
+  margin-left: 10%;
+}
+
+.taskList p{
+color: grey;
+}
+
+.taskList{
+  background-color: rgb(199, 247, 232);
+  width: 50%;
+}
