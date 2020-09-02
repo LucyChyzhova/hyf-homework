@@ -1,12 +1,21 @@
 import React from 'react'
-//import '.App.css'
-import DataFetching from './components/DataFetching'
+import {BrowserRouter, Switch, Route, Link} from "react-router-dom";
+import {Search} from "./pages/Search";
 
-function App(){
+
+
+export const App = () => {
   return (
-    <div className='App'>
-      <DataFetching />
+    <BrowserRouter>
+    <div className="navigation">
+      <Link to="/search">Search</Link>
     </div>
+    <Switch>
+      <Route path="/search">
+        <Search/>
+      </Route>
+    </Switch>
+    </BrowserRouter>
   )
 }
-export default App
+export default App;
