@@ -18,7 +18,7 @@ export const Search = () => {
         render ={({data, error, loading}) => (
             <div>
                 {loading && <div>Loading... </div>}
-                {error && <div> an error...</div>}
+                {error && <div>No results</div>}
 
                 {data && data.map ((item, key) =>(
                     <div key={key}>

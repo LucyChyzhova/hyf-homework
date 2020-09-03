@@ -16,11 +16,18 @@ export const Fetcher = ({ search, render }) => {
         return response.json();
       });
 
-      if (result.error) {
+     if (search === ""){
         setLoading(false);
         setError(result);
-      } else {
+        setData(false);
+      }
+      else if (search !== "") {
         setLoading(false);
+        setData(result.items); 
+        setError(false);
+      }
+      else {
+        setLoading(true);
         setData(result.items);
       }
     };
