@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Search } from "./pages/Search";
 import { About } from "./pages/About";
+//import  {UserPage } from "../pages/UserPage";
 
 export const App = () => {
   return (
@@ -36,6 +37,7 @@ export const App = () => {
         <Route path="/about">
           <About />
         </Route>
+      
       </Switch>
     </BrowserRouter>
   );
