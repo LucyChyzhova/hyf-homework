@@ -1,5 +1,7 @@
 potato
 carrot
-onion
+red onion
 zucchini
 broccoli
+peas
+cabbage
